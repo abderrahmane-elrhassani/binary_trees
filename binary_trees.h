@@ -40,4 +40,65 @@ void binary_tree_delete(binary_tree_t *tree);
 
 int binary_tree_is_leaf(const binary_tree_t *node);
 
+int binary_tree_is_root(const binary_tree_t *node);
+
+void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int));
+
+void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int));
+
+void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));
+
+size_t binary_tree_height(const binary_tree_t *tree);
+
+size_t binary_tree_depth(const binary_tree_t *tree);
+void node_height_2(const binary_tree_t *tree, size_t n, size_t *height);
+
+size_t binary_tree_size(const binary_tree_t *tree);
+
+size_t binary_tree_leaves(const binary_tree_t *tree);
+
+size_t binary_tree_nodes(const binary_tree_t *tree);
+int binary_tree_is_leaf(const binary_tree_t *node);
+
+int binary_tree_balance(const binary_tree_t *tree);
+void node_height(const binary_tree_t *tree, int n, int *height);
+
+int binary_tree_is_full(const binary_tree_t *tree);
+
+int binary_tree_is_perfect(const binary_tree_t *tree);
+void tree_stats(const binary_tree_t *tree, size_t n,
+	size_t *leaves, size_t *height);
+
+binary_tree_t *binary_tree_sibling(binary_tree_t *node);
+
+binary_tree_t *binary_tree_uncle(binary_tree_t *node);
+
+binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
+				     const binary_tree_t *second);
+
+int binary_tree_is_complete(const binary_tree_t *tree);
+
+binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
+
+binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
+
+int binary_tree_is_bst(const binary_tree_t *tree);
+
+bst_t *bst_insert(bst_t **tree, int value);
+
+bst_t *array_to_bst(int *array, size_t size);
+
+bst_t *bst_search(const bst_t *tree, int value);
+
+bst_t *bst_remove(bst_t *root, int value);
+bst_t *bst_min_node(bst_t *root);
+
+int binary_tree_is_avl(const binary_tree_t *tree);
+size_t binary_tree_height(const binary_tree_t *tree);
+int binary_tree_balance(const binary_tree_t *tree);
+
+int binary_tree_is_heap(const binary_tree_t *tree);
+
+heap_t *heap_insert(heap_t **root, int value);
+
 #endif /* _BINARY_TREES_H_ */
